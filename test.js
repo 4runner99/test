@@ -3,14 +3,11 @@ let currentIndex = 0;
 let intervalId;
 const body = document.body;
 
+
 function startRainbowWave() {
-  if (intervalId) {
-    clearInterval(intervalId);
-    intervalId = null;
-    body.style.transition = 'background-color 0.5s ease'; // Optional: Add a smooth transition when stopping the animation
-  } else {
-    intervalId = setInterval(animateRainbow, 100); // Animate the rainbow every 100 milliseconds
-    body.style.transition = 'none'; // Remove transition for smoother color change
+  if (!intervalId) { // Check if the animation is not running
+    intervalId = setInterval(animateRainbow, 100);
+    body.style.transition = 'none';
   }
 }
 
@@ -20,3 +17,12 @@ function animateRainbow() {
 }
 
 document.getElementById('startButton').addEventListener('click', startRainbowWave);
+
+document.getElementById('stopButton').addEventListener('click', function() {
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+    body.style.transition = 'background-color 0.5s ease';
+    body.style.backgroundColor = 'white';
+  }
+});

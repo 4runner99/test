@@ -1,0 +1,45 @@
+/* Add a black background color to the top navigation */
+.body{
+
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJqc3ByZWZ6dGVtaDVwZ2Zuem9jODcxc3ltdXE0aXowc296MDNmayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cmwHshdGpInWl1MKV6/giphy.gif');
+}
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;            /* Center links horizontally */
+    justify-content: center;  /* Center links horizontally */
+  }
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 189px; /* right:20px left:25px */
+    text-decoration: none;
+    font-size: 17px;
+    float: none; /* Remove the float property */
+    border-radius: 20px; /* Add rounded corners */
+}
+  
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #04AA6D ;
+    color: black;
+}
+  
+.centered-content {
+    text-align: center;
+}
+
+/* CSS for button placement */
+.button-container {
+    text-align: center; /* Center-align the buttons horizontally */
+}
+
+/* Optional styling for the buttons */
+button {
+    padding: 5px 20px; /* Add padding for better appearance */
+    margin: 5px; /* Add margin to separate the buttons */
+}
+ 
+  
